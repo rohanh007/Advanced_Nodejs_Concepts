@@ -7,7 +7,6 @@
 
 // In the Node.js world, when we start a program, a single thread is automatically created to execute the code within an event loop. 
 // Understanding this event loop is crucial for addressing performance concerns in Node. 
-// To simplify comprehension, we'll create a fake code file, "loop.js."
 // Upon initiating a Node application, it executes the contents of a file, symbolically represented as myFile.runContents.
 // Following this execution, the event loop begins, depicted by a while loop, with each iteration referred to as a "tick." 
 // The loop's continuation is determined by a condition checked with a helper function, shouldContinue. 

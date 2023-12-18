@@ -1,0 +1,3 @@
+Thread pool work and how it used into the libuv
+
+The `pbkdf2` function, used for password hashing, involves multiple threads in Node.js. Even though Node.js is known as single-threaded, it employs a "thread pool" (four extra threads) for heavy tasks like `pbkdf2`. This pool prevents the entire program from freezing during complex calculations. The main thread keeps the program running, while the thread pool handles demanding operations like password hashing. Without this setup, the program would pause during such tasks. The use of a thread pool reveals that, contrary to common belief, Node.js isn't strictly single-threaded, making it more efficient for handling diverse tasks simultaneously.
